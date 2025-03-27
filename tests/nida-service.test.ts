@@ -15,7 +15,7 @@ describe('NidaService', () => {
   });
 
   describe('lookupUser', () => {
-    const mockNidaNumber = '20000313411070000121';
+    const mockNidaNumber = '012345678901';
     const mockUserData: UserData = {
       FIRSTNAME: 'John',
       LASTNAME: 'Doe',

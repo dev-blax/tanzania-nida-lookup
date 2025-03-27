@@ -1,6 +1,6 @@
 {
   "name": "tanzania-nida-lookup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js library for retrieving user information from Tanzania's National Identification Authority (NIDA)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

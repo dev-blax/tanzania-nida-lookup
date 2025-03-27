@@ -49,7 +49,7 @@ export class NidaService {
   public async lookupUser(nidaNumber: string): Promise<UserData | null> {
     try {
       const url = this.BASE_URL.replace('{}', nidaNumber);
-      const response = await axios.get<NidaResponse>(url, {
+      const response = await axios.post<NidaResponse>(url, {
         headers: this.getHeaders(),
       });
 
