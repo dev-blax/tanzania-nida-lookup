@@ -1,0 +1,10 @@
+src/
+tests/
+examples/
+.git/
+.github/
+.vscode/
+coverage/
+*.log
+tsconfig.json
+jest.config.js
