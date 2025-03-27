@@ -1,4 +1,11 @@
-node_modules
+node_modules/
+dist/
+coverage/
+.env
+*.log
+.DS_Store
+.idea/
+.vscode/
 yarn.lock
 package-lock.json
 babel.config.js

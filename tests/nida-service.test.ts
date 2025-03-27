@@ -19,8 +19,8 @@ describe('NidaService', () => {
     const mockUserData: UserData = {
       FIRSTNAME: 'John',
       LASTNAME: 'Doe',
-      PHOTO: 'base64EncodedPhoto',
-      SIGNATURE: 'base64EncodedSignature'
+      PHOTO: Buffer.from('base64EncodedPhoto', 'base64'),
+      SIGNATURE: Buffer.from('base64EncodedSignature', 'base64')
     };
 
     it('should successfully lookup user data', async () => {
@@ -44,8 +44,8 @@ describe('NidaService', () => {
       if (result) {
         expect(result.FIRSTNAME).toBe(mockUserData.FIRSTNAME);
         expect(result.LASTNAME).toBe(mockUserData.LASTNAME);
-        expect(result.PHOTO).toBeDefined();
-        expect(result.SIGNATURE).toBeDefined();
+        expect(Buffer.isBuffer(result.PHOTO)).toBe(true);
+        expect(Buffer.isBuffer(result.SIGNATURE)).toBe(true);
       }
     });
 
